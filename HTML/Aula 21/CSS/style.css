@@ -1,0 +1,40 @@
+p {
+    color: chocolate;
+}
+
+.botao {
+    color: darkseagreen;
+    background-color: teal;
+    border-radius: 5px;
+    border-color: teal font-family:'Courier New', Courier, monospace
+}
+
+.rotulo {
+    color: darkseagreen;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.entrada {
+    background-color: aquamarine;
+    border-radius: 5px
+}
+
+th {
+    color: darkseagreen;
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+table {
+    border: 1px solid darkgrey;
+    justify-content: center;
+}
+
+td {
+    border: 1px solid darkgrey;
+}
+
+tr {
+    text-align: center;
+}
