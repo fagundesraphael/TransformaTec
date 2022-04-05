@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Estilizado</title>
+    <style>
+        /*seletor por elemento*/
+        div {
+            width: 50%;
+            height: 300px;
+            background-color: bisque;
+            margin: 0 auto;
+            padding: 10px;
+            border: 1px solid black;
+        }
+
+        /*seletor por elemento*/
+        label {
+            color: cadetblue;
+            font-size: 20px;
+            text-align: center;
+
+        }
+
+        /*seletores agrupados por meio de atributos*/
+        input[type=email],
+        input[type=password],
+        input[type=text] {
+
+            padding: 12px 20px;
+            margin: 8px 0;
+
+            display: flex;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+
+        /*seletor por classe*/
+        .botao {
+            background-color: #04AA6D;
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        /*seletor por elemento*/
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <form action="">
+
+            <label for="nome">Nome</label>
+
+            <input type="text" name="nome"></input>
+
+            <label for="Email">Email</label>
+
+            <input type="email" name="Email" id="Email">
+
+            <label for="senha">Senha</label>
+
+            <input type="password" name="senha" id="senha">
+
+            <input type="submit" value="Enviar" class="botao">
+        </form>
+    </div>
+</body>
+
+</html>
