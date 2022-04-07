@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="teste.css">
+    <title>Document</title>
+    <style>
+        body,
+        p {
+            padding: 0;
+            margin: 0auto;
+            font-size: 1.5rem;
+            /* tamanho da fonte */
+            color: cornflowerblue;
+            /* cor do texto */
+            text-align: center;
+            /* alinhamento */
+        }
+
+        .principal {
+            width: 80%;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 75% 25%;
+            grid-template-rows: 100px 450px 150px;
+            grid-template-areas: "cabecalho cabecalho""secao barra-lateral""rodape rodape";
+        }
+
+        header {
+            grid-area: cabecalho;
+            background-color: burlywood;
+
+        }
+
+        section {
+            grid-area: secao;
+            background-color: lightblue;
+        }
+
+        aside {
+            grid-area: barra-lateral;
+            background-color: linen;
+        }
+
+        footer {
+            grid-area: rodape;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .item1,
+        .item2,
+        .item3 {
+            width: 25%;
+            background-color: bisque;
+        }
+
+        .item2 {
+            width: 50%;
+            margin: 0 2px;
+        }
+
+        .item3 {
+            margin: 0;
+        }
+
+        @media(max-width: 992px) {
+            .principal {
+                grid-template-columns: 100%;
+                grid-template-areas: "cabecalho""secao""barra-lateral""rodape";
+            }
+
+            footer {
+                display: flex;
+                flex-wrap: wrap;
+                text-align: center;
+            }
+
+            .item1,
+            .item2,
+            .item3 {
+                margin: 0;
+                border: solid 1px #fff;
+                width: 49%;
+            }
+
+            .item2 {
+                width: 100%;
+                order: -1;
+            }
+        }
+
+        @media(max-width: 768px) {
+            body {
+                margin: 0 15px;
+            }
+
+            .principal,
+            .item1,
+            .item2,
+            .item3 {
+                width: 100%;
+            }
+
+            .item2 {
+                order: initial;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="principal">
+        <header>
+            <p>Cabeçalho</p>
+        </header>
+        <section>
+            <p>Conteudo principal</p>
+        </section>
+        <aside>
+            <p>Barra lateral</p>
+        </aside>
+        <footer>
+            <div class="item1">
+                <p>Item 1</p>
+            </div>
+            <div class="item2">
+                <p>Item 2</p>
+            </div>
+            <div class="item3">
+                <p>Item 3</p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
