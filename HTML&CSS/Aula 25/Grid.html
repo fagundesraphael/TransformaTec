@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisão das aulas de Grid</title>
+    <style>
+
+        body, p {
+            font-size: 1.5rem;
+            color: cornflowerblue;
+        }
+        .item1 {
+            grid-area: myArea;
+            background-color: burlywood;
+        }
+
+        .item5 {
+            grid-area: myArea5;
+            background-color: lightblue;
+        }
+
+        .item8 {
+            grid-area: myArea8;
+            background-color: linen;
+        }
+
+        .item9 {
+            grid-area: myArea9;
+            background-color: bisque;
+        }
+
+        .item10 {
+            grid-area: myArea10;
+            background-color: bisque;
+            margin: 0 1px;
+        }
+
+        .item12 {
+            grid-area: myArea12;
+            background-color: bisque;
+        }
+
+        .grid-container {
+            display: grid;
+            padding: 10px;
+
+            grid-template-areas:
+            'myArea myArea myArea myArea'
+            'myArea5 myArea5 myArea5 myArea8'
+            'myArea9 myArea10 myArea10 myArea12';
+        }
+
+        .grid-container>div {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="item1">Cabeçalho</div>
+        <div class="item5">Conteudo Principal</div>
+        <div class="item8">Barra lateral</div>
+        <div class="item9">Item 1</div>
+        <div class="item10">Item 2</div>
+        <div class="item12">Item 3</div>
+    </div>
+</body>
+
+</html>
