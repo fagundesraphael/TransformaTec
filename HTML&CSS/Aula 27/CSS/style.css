@@ -22,7 +22,8 @@ body {
     overflow: hidden;
 }
 
-.right .left, form {
+.right .left,
+form {
     display: flex;
     align-content: center;
     justify-content: center;
@@ -58,7 +59,7 @@ form {
     display: flex;
     padding: 20px;
     margin-bottom: 25px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19) 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 }
 
 form input {
@@ -67,6 +68,12 @@ form input {
     margin-bottom: 10px;
     border-radius: 5px;
     border: 1px solid #999;
+    outline: none;
+    font-size: 16px;
+}
+
+form input:focus {
+    border: 1px solid #1877f2;
 }
 
 .right__loginBtn {
@@ -122,4 +129,107 @@ form input {
 .right p {
     font-size: 15px;
     font-family: 'Arial';
+}
+
+@media(max-width:950px){
+
+    .container{
+        flex-direction: column;
+    }
+
+    .left{
+        width:400px;
+        align-content:center;
+        align-items:center;
+    }
+
+    .left p{
+        height: 75px;
+        font-size: 20px;
+    }
+
+}
+
+@media(max-width:500px){
+
+    .right{
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center
+    }
+
+
+    form{
+        width:350px;
+        align-content: center;
+        align-items:center;
+    }
+}
+
+@media(max-width:950px){
+
+    .container{
+        flex-direction: column;
+    }
+
+    .left{
+        width:400px;
+        align-content:center;
+        align-items:center;
+    }
+
+    .left p{
+        height: 75px;
+        font-size: 20px;
+    }
+
+}
+
+@media(max-width:500px){
+
+    .right{
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center
+    }
+
+    
+    form{
+        width:350px;
+        align-content: center;
+        align-items:center;
+    }
+}
+
+@media(max-width:300px){
+    .right{
+        display: flex;
+        justify-content:center;
+    }
+
+    .left{
+        display: flex;
+        justify-content: center;
+    }
+
+    .left img{
+        height: 95px;
+        
+    }
+
+    form{
+        width:250px;
+        align-content: center;
+        align-items:center;
+    }
+
+    .left p, .right p{
+        display: none;
+    }
+
+    form input, .right__forget, .right__loginBtn, .right__signupBtn{
+        font-size: 12px;
+    }
 }
