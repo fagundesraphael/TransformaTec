@@ -1,1 +1,1 @@
-# Conteúdos das futuras aulas serão postados aqui.
+# Conteúdos das aulas divididos por temas e pastas.
