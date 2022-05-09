@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p>Calcular</p>
+
+    <input type="submit" onclick="calcular()">
+
+    <p id="resultado"></p>
+
+    <script>
+        function calcular() {
+            let n1 = 1
+            let n2 = 2
+
+            let soma = n1 + n2
+
+            exibir(soma)
+        }
+
+        function exibir(soma) {
+            document.getElementById("resultado").innerHTML = soma
+        }
+    </script>
+</body>
+
+</html>
