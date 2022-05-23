@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Calculadora Async/Await</title>
+</head>
+
+<body>
+    <div>
+        <input type="number" id="n1" placeholder="Número 1">
+        <br>
+        <br>
+
+        <input type="number" id="n2" placeholder="Número 2">
+        <br>
+        <br>
+
+        <input type="submit" id="calcular" value="Calcular" onclick="calcular()">
+        <br>
+        <br>
+
+        <p id="resultado"></p>
+    </div>
+
+    <script>
+        async function calcular() {
+
+            n1 = document.getElementById("n1").value
+            n2 = document.getElementById("n2").value
+
+            const retorno = await retornaSoma()
+
+            console.log("retornaSoma(): ", retorno)
+
+            await exibir(Number(n1) + Number(n2))
+        }
+
+        async function retornaSoma() {
+            const a = 10
+            const b = 20;
+
+            return a + b
+        }
+
+        async function exibir(soma) {
+
+            document.getElementById("resultado").innerHTML = soma
+
+        }
+    </script>
+</body>
+
+</html>

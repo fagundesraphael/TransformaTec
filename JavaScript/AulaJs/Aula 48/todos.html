@@ -1,0 +1,40 @@
+!DOCTYPE html> <html lang="en">
+
+<head>
+    <title>Lista de Tarefas</title>
+</head>
+
+<body>
+    <div id="container">
+        <input type="text" id="todo_id" placeholder="ID da tarefa">
+        <input type="submit" name="" id="todo_search" value="Pesquisar" onclick="getTodo()">
+        <p id="id"></p>
+        <p id="title"></p>
+        <p id="userId"></p>
+        <p id="completed"></p>
+    </div>
+</body>
+<div id="container"> <input type="text" id="todo_id" placeholder="ID da tarefa"> <input type="submit" name=""
+        id="todo_search" value="Pesquisar" onclick="getTodo()"> </div>
+<script>
+    function getTodo() {
+        const todo_id = document.getElementById("todo_id").value
+        const todo_url = `https://jsonplaceholder.typicode.com/todos/${todo_id}`
+        fetch(todo_url)
+            //resultado da promessa de retorno do dado pesquisado do servidor
+            .then(response => response.json())
+            //resultado da promessa de converter o dado retornado do servidor para JSON
+            .then((json) => {
+                //apresentação dos dados retornados do servidor
+                document.getElementById("id").innerHTML = "Id do TODO: " + json.id
+                document.getElementById("title").innerHTML = "Título do TODO: " + json.title
+                document.getElementById("userId").innerHTML ="Id do usuário do TODO: " + json.userId
+                document.getElementById("completed").innerHTML ="Status de completo do TODO: " + json.completed
+            
+            }
+            
+        ).catch(err => console.log(erro))
+    }
+</script>
+
+</html>

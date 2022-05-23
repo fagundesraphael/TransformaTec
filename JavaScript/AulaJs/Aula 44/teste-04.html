@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="principal">
+
+        <input type="text" id="nome" placeholder="Nome">
+        <input type="text" id="email" placeholder="Email">
+        <input type="password" id="senha" placeholder="Senha">
+        <input type="password" id="confirma" placeholder="Confirmar senha">
+        <input type="submit" name="" id="enviar" value="Cadastrar" onclick="cadastrar()">
+    </div>
+
+    <p id="resultado"></p>
+
+    <script>
+        function exibir(mensagem) {
+            document.getElementById("resultado").innerHTML = mensagem
+        }
+
+        function cadastrar() {
+            let cadastro = new Promise(
+                function (sucesso, erro) {
+
+                    //obtendo valores dos campos
+                    let nome = document.getElementById("nome").value
+                    let email = document.getElementById("email").value
+                    let senha = document.getElementById("senha").value
+                    let confirma = document.getElementById("confirma").value
+
+                    //verificando se há campos vazios e retornando erro
+                    if (!nome || !email || !senha || !confirma) {
+                        erro("Não são permitidos campos em branco")
+                        //verificando se senhas são iguais e retornando erro
+                    } else if (senha != confirma) {
+                        erro("Senhas não conferem")
+                        //retorna mensagem de sucesso
+                    } else {
+                        sucesso("Usuário cadastrado")
+                    }
+                }
+            ).then(
+                //chamando a função para mensagem de sucesso
+                function (mensagem) {
+                    exibir(mensagem)
+                },
+                //chamando a função para mensagem de erro
+                function (err) {
+                    exibir(err)
+                }
+            )
+        }
+    </script>
+</body>
+
+</html>

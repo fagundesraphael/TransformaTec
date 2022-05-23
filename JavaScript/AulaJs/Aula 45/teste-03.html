@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Calculadora</title>
+</head>
+
+<body>
+    <div id="principal">
+
+        <input type="number" id="numero1" placeholder="Primeiro número">
+        <br>
+        <br>
+        <input type="number" id="numero2" placeholder="Segundo número">
+        <br>
+        <br>
+        <input type="submit" value="Calcular" onclick="calcular()">
+        <br>
+        <br>
+        <p id="resultado"></p>
+
+    </div>
+
+    <script>
+        function exibir(r) {
+            document.getElementById("resultado").innerHTML = r
+        }
+
+        function calcular() {
+
+            let promessa = new Promise(
+                function (resultado, erro) {
+                    let n1 = document.getElementById("numero1").value
+                    let n2 = document.getElementById("numero2").value
+
+                    resultado(Number(n1) / Number(n2))
+                }
+            )
+
+            promessa.then(
+                function (result) {
+                    exibir(result)
+                }).catch(
+                function () {
+                    exibir("Erro")
+                }
+            )
+        }
+    </script>
+</body>
+
+</html>

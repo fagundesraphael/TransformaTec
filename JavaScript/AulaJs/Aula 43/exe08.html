@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="principal">
+        <p>Calcular</p>
+
+        <input type="submit" onclick="calcular()">
+
+    </div>
+
+    <script>
+        async function calcular() {
+            let n1 = 40
+            let n2 = 50;
+
+            await exibir(n1 + n2)
+        }
+
+        async function exibir(soma) {
+
+            setTimeout(() => {
+                var resultado = document.createElement("p")
+                resultado.innerHTML = "Resultado: " + soma;
+
+                document.getElementById("principal").appendChild(resultado)
+
+            }, 5000)
+
+        }
+
+        function rodape() {
+            var rodape = document.createElement("p")
+            rodape.innerHTML = "Rodapé"
+
+            document.getElementById("principal").appendChild(rodape)
+        }
+
+        rodape()
+    </script>
+</body>
+
+</html>

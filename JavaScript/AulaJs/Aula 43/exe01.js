@@ -1,5 +1,5 @@
 function obrigado() {
-    console.log("Obrigado")
+    console.log("Obrigado!")
 }
 
 function deNada() {
