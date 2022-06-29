@@ -1,7 +1,8 @@
 public class NamesArray {
-
+    
     public static void main(String[] args) {
-        String[] names = { "João", "Maria", "José", "Pedro", "Raphael" };
+        
+        String[] names = {"Cassiano","Jose", "Paulo"};
 
         for (String name : names) {
             System.out.println(name);
@@ -11,4 +12,5 @@ public class NamesArray {
             System.out.println(names[i]);
         }
     }
+
 }

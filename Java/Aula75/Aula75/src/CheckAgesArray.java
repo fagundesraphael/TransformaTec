@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
 public class CheckAgesArray {
-
+    
     public static void main(String[] args) {
-
+        
         Scanner scanner = new Scanner(System.in);
 
         int[] ages = new int[5];
@@ -16,7 +16,7 @@ public class CheckAgesArray {
         }
 
         for (int age : ages) {
-
+            
             String message = age < 18 ? "Menor" : "Maior";
             System.out.println(message);
 
